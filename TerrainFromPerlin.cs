@@ -39,7 +39,7 @@ public class TerrainFromPerlin : MonoBehaviour {
 
     public bool dampenEdges;
 
-    public bool additiveMode;
+    public bool additionMode;
 
 
     private float startPointX;
@@ -141,7 +141,7 @@ public class TerrainFromPerlin : MonoBehaviour {
         }
 
 
-        if (additiveMode)
+        if (additionMode)
         {
             var terrainHeightMap = terrainData.GetHeights(0, 0, terrainHeightmapResolution, terrainHeightmapResolution);
          
