@@ -119,20 +119,14 @@ public class TerrainPainter : MonoBehaviour {
 
                 float z = splatWeights.Sum();
 
-                // Loop through each terrain texture
                 for (int i = 0; i < terrainData.alphamapLayers; i++)
                 {
-
-                    // Normalize so that sum of all texture weights = 1
                     splatWeights[i] /= z;
-
-                    // Assign this point to the splatmap array
                     splatmapData[x, y, i] = splatWeights[i];
                 }
             }
         }
 
-        // Finally assign the new splatmap to the terrainData:
         terrainData.SetAlphamaps(0, 0, splatmapData);
 
 
